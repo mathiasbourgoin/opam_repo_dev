@@ -7,4 +7,4 @@ build: [
 remove: [
 	[make "uninstall"]
 ]
-depends: [ "spoc" {>= "20140620"} ] 
+depends: [ "ocp-build" "spoc" {>= "20140620"} ] 
