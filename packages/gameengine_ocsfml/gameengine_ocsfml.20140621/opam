@@ -1,0 +1,10 @@
+opam-version: "1" 
+maintainer: "Stéphane Ferreira David Ieong Mathieu Michel Ghiles Zia " 
+build: [
+	[make "build"]
+	[make "install"]
+]
+remove: [
+	[make "uninstall"]
+]
+depends: [ "ocp-build" "ocsfml" {>= "2.0a"} ] 
