@@ -1,4 +1,5 @@
-opam-version: "1" 
+opam-version: "1.1" 
+available: [ ocaml-version = "4.01.0"]
 maintainer: "Mathias Bourgoin <mathias.bourgoin@lip6.fr> " 
 build: [
 	[make "build"]
@@ -7,4 +8,4 @@ build: [
 remove: [
 	[make "uninstall"]
 ]
-depends: [ "ocp-build"  ] 
+depends: [ "ocp-build" "findlib" {>= "1.4.1"} ] 
