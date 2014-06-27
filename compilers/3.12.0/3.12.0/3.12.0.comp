@@ -1,0 +1,18 @@
+opam-version: "1"
+version: "3.12.0"
+src: "http://caml.inria.fr/pub/distrib/ocaml-3.12/ocaml-3.12.0.tar.gz"
+patches: [ "https://github.com/ocaml/ocaml/commit/80384c6d8401cdd897e7ff4c75a7a7b1a12b5585.diff" ]
+build: [
+  ["./configure" "-prefix" prefix]
+  [make "world"]
+  [make "world.opt"]
+  [make "install"]
+  ["mkdir" "-p" "%{prefix}%/lib/ocaml/compiler-libs"]
+  ["cp" "-r" "typing" "parsing" "utils" "%{prefix}%/lib/ocaml/compiler-libs/"]
+]
+packages: [
+  "base-unix"
+  "base-bigarray"
+  "base-threads"
+]
+env: [[CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"]]
