@@ -8,4 +8,4 @@ build: [
 remove: [
 	[make "uninstall"]
 ]
-depends: [ "ocp-build" "spoc" {>= "0.2-alpha"} ] 
+depends: [ "ocp-build" "spoc" {>= "0.2-alpha"} "ctypes"] 
